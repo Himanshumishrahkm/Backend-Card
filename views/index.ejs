@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gray-300 py-10">
+
+  <div class="mx-auto w-full max-w-2xl px-4">
+
+    <!-- Create Task Section -->
+    <div class="mb-10">
+
+      <h1 class="mb-2 text-3xl font-bold text-gray-900">
+        Create Task
+      </h1>
+
+      <p class="mb-6 text-gray-500">
+        Add a new task with a title and description.
+      </p>
+
+      <form action="/create" method="POST" class="space-y-4">
+
+        <!-- Title -->
+        <div>
+          <label
+            for="title"
+            class="mb-2 block text-sm font-medium text-gray-700"
+          >
+            Task Title
+          </label>
+
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter task title"
+            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-200"
+            required
+          />
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label
+            for="description"
+            class="mb-2 block text-sm font-medium text-gray-700"
+          >
+            Description
+          </label>
+
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="Enter task description"
+            class="w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-200"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Button -->
+        <button
+          type="submit"
+          class="rounded-lg bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-700 active:scale-95"
+        >
+          Create Task
+        </button>
+
+      </form>
+    </div>
+
+
+    <!-- Display Tasks Section -->
+    
+      <div class="mb-5 flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-gray-900">
+          Your Tasks
+        </h2>
+
+        <span class="text-sm text-gray-500">
+          Tasks
+        </span>
+      </div>
+      
+
+      <div>
+      <% if(files.length > 0){ %>
+          <% files.forEach((val)=>{ %>
+             <div class="mb-3 border-b border-gray-300 pb-3">
+                <h3 class="mb-2 text-xl font-semibold text-gray-900">
+                <%= val %>
+                </h3>
+
+            </div>
+          <% }) %>
+      <% } else { %>
+        <div class="mb-4 border-b border-gray-300 pb-5">
+          NO Task
+      </div>
+      <% } %>
+
+      
+
+      
+      
+
+    </div>
+
+  </div>
+
+</body>
+</html>

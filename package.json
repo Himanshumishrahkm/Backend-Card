@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Himanshumishrahkm/Backend-Card#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "@tailwindcss/vite": "^4.3.3",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "tailwindcss": "^4.3.3"
   }
 }
