@@ -8,9 +8,9 @@
 </head>
 <body class="min-h-screen bg-gray-300 py-10">
 
-  <div class="mx-auto w-full max-w-2xl px-4">
+  <div class="mx-auto p-5 bg-gray-400 w-full max-w-2xl px-4">
 
-    <!-- Create Task Section -->
+    
     <div class="mb-10">
 
       <h1 class="mb-2 text-3xl font-bold text-gray-900">
@@ -56,7 +56,7 @@
             name="description"
             rows="5"
             placeholder="Enter task description"
-            class="w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-200"
+            class="w-full h-20 resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-200"
             required
           ></textarea>
         </div>
@@ -89,12 +89,16 @@
       <div>
       <% if(files.length > 0){ %>
           <% files.forEach((val)=>{ %>
-             <div class="mb-3 border-b border-gray-300 pb-3">
-                <h3 class="mb-2 text-xl font-semibold text-gray-900">
+             <div class="  border-gray-300 pb-3">
+                <h3 class=" text-xl font-semibold text-gray-900">
                 <%= val %>
                 </h3>
 
             </div>
+            <div class="pb-8 flex items-center justify-between">
+        <a href="/file/<%= val %>" class="text-[14px] text-blue-500">Read more..</a>
+        <a href="/edit/<%= val %>" class="text-[14px] text-blue-500">Edit Filename</a>
+      </div>
           <% }) %>
       <% } else { %>
         <div class="mb-4 border-b border-gray-300 pb-5">

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="h-screen w-screen bg-gray-300">
+    <div class=" p-5 text-[15px] text-blue-500 w-full max-w-2xl underline px-4">
+        <a href="/">Go To Back</a>
+     </div>
+    <div class="p-5">
+     <form action="/edit" method="post" class=" p-2 flex border w-1/4 flex-col ">
+        <input class="m-2 h-8 border border-black outline-none text-gray-500 " name="oldFileName" type="text" value = <%=filename%>>
+        <input class="m-2 h-8 border border-black outline-none " name="newFileName" type="text">
+        <button class="bg-yellow-500 w-[50%] mx-15" type="submit">Update</button>
+     </form>
+
+     </div>
+   
+</body>
+</html>
